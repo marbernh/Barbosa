@@ -11,7 +11,6 @@ package web.proj.barbosa.quiz;
 public class User {
 
     private String name, userName, password;
-    private int gamesPlayed, win, lose, score;
     private Long id;
     public Result result;
 
@@ -19,20 +18,17 @@ public class User {
         this.id = id;
         this.userName = userName;
         this.password = password;
-        gamesPlayed = 0;
-        win = 0;
-        lose = 0;
-        score = 0;
         result = new Result(id);
     }
-    
+
     public Long getId() {
         return id;
     }
 
-    public void setId(Long id){
+    public void setId(Long id) {
         this.id = id;
     }
+
     public String getName() {
         return name;
     }
@@ -55,16 +51,8 @@ public class User {
     /*
      * vill vi ha ett mer komplicerat lösen?
      */
+
     public void setPassword(String password) {
-        this.password = password;        
-    }
-    
-    public void gameStat(Boolean winGame){
-        if(winGame)
-            win++;
-        else
-            lose++;
-        
-        result.update(gamesPlayed++, win, lose);
+        this.password = password;
     }
 }
