@@ -6,6 +6,7 @@ package web.proj.barbosa.quiz.superbean;
 
 import java.io.Serializable;
 import javax.ejb.Singleton;
+import web.proj.barbosa.quiz.GameEngine;
 import web.proj.barbosa.quiz.Leaderboard;
 import web.proj.barbosa.quiz.Result;
 
@@ -16,16 +17,15 @@ import web.proj.barbosa.quiz.Result;
 @Singleton
 public class GameBean implements Serializable {
     
-    
-    private GameBean(){
-        
-    }
-    
-    public Result getResult(Long id){
-        return Result(id);
-    }
+    private final GameEngine g = new GameEngine();
 
-    private Result Result(Long id) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public GameBean() {
     }
+    
+
+
+    public String getAnswer(){
+        return g.getAnswer();
+    }
+    
 }

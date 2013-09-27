@@ -13,24 +13,15 @@ public class GameEngine {
     private Result result;
     private int life;
     private int score;
-    private String answer;
+    private String answer = "gurka"; //  ändra sen.
     
-    public GameEngine(Long id, String answer){
-        result = new Result(id);
+    public GameEngine(){
         life = 3;
         score = 0;
-        this.answer = answer;
+        //this.answer = answer;
     }
     
-    // Tid och Score - ska de hålla ihop?
-    public void GameRules(String guess){
-        if(guess.equals(answer)){
-            score += 15;
-        }else{
-            life--;
-        }
-        if(life > 0){
-            //newGame......
-        }
-    } 
+    public String getAnswer(){
+        return answer;
+    }
 }
