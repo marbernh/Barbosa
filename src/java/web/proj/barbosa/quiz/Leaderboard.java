@@ -31,7 +31,7 @@ public class Leaderboard implements Comparator<Result> {
     }
 
     public void sortList() {
-        Collections.sort(resultboard, this);
+        // gör något
     }
 
     @Override
