@@ -24,7 +24,7 @@
         </style>
     </head>
     <body>
-       <h1>Project Barbosaa!</h1>
+       <h1>Project Barbosa!</h1>
        <ul id="menu">
            <li id="menu">Home</li>
            <li id="menu">Game</li>
