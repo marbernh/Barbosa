@@ -39,6 +39,7 @@ and open the template in the editor.
                 <h:outputText value="Guess" />
                 <h:inputText id="guess" value="#{guessBean.guess}"/>
                 <h:message for="guess" />
+                <h:outputText value="#{guessBean.outcome}"/>
             </h:panelGrid>
             <!--  <h:button outcome="products" value="Cancel"/> -->            
             <h:commandButton action="#{guessBean.validate}" value="OK" />

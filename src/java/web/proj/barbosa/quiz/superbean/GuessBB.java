@@ -17,16 +17,19 @@ import javax.inject.Named;
 public class GuessBB {
     
     private String guess;
-    //@Inject
-    //private GameBean game;
+    private String outcome = "";
+    @Inject
+    private GameBean game;
     
     public String validate(){
-        if(true){
-            System.out.println("Stämmer");
+        if(game.getAnswer().equals(guess)){
+            System.out.println("Stämmer " + guess);
+            outcome = "Your answer is correct";
             return "guess";
         }else
             System.out.println("Stämmer ej");
-        return "hej";
+            outcome = "Your answer is wrong";
+        return "guess";
     }
     
     public String getGuess() {
@@ -35,5 +38,12 @@ public class GuessBB {
 
     public void setGuess(String guess) {
         this.guess = guess;
+    }
+        public String getOutcome() {
+        return outcome;
+    }
+
+    public void setOutcome(String outcome) {
+        this.outcome = outcome;
     }
 }
